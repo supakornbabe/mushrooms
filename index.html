@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Parallel Sets - Jason Davies</title>
+<title>Mushrooms</title>
 <style>
   @import url(http://www.jasondavies.com/parallel-sets/d3.parsets.css);
 
@@ -104,7 +104,7 @@
   <script src="https://www.jasondavies.com/parallel-sets/highlight.min.js"></script>
   <script>
     var chart = d3.parsets()
-      .dimensions(["class","cap-surface","habitat", "spore-print-color","cap-color" ]);
+      .dimensions(["class","habitat", "spore-print-color","cap-color","cap-surface" ]);
       
     var vis = d3.select("#vis").append("svg")
       .attr("width", chart.width())
@@ -132,7 +132,7 @@
     }
 
     d3.csv(
-      "https://gist.githubusercontent.com/supakornbabe/b111f3462dddddd994ca8230a7862b69/raw/42447fc8c6fa1b37e91bb084e7f2dd1f57eb430c/gistfile1.txt",
+      "https://gist.githubusercontent.com/supakornbabe/2cb3623b5ee5b750f0f0b9e8d2dc93a6/raw/c28b6f70ba59d2fccabee1927b6062cdcf4d574c/gistfile1.txt",
       function (csv) {
         vis.datum(csv).call(chart);
 
