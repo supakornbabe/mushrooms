@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Parallel Sets - Jason Davies</title>
+<title>Mushrooms</title>
 <style>
-  @import url(http://www.jasondavies.com/parallel-sets/d3.parsets.css);
+  @import url(https://www.jasondavies.com/parallel-sets/d3.parsets.css);
 
   body {
     font-family: sans-serif;
@@ -99,12 +99,12 @@
     <span class="curves"><label for="curved"><input type="checkbox" id="curved" onchange="curves.call(this)">
         Curves?</label></span>
   </div>
-  <script src="https://mbostock.github.com/d3/d3.js?2.5.0"></script>
+  <script src="https://d3js.org/d3.v2.js"></script>
   <script src="https://www.jasondavies.com/parallel-sets/d3.parsets.js"></script>
   <script src="https://www.jasondavies.com/parallel-sets/highlight.min.js"></script>
   <script>
     var chart = d3.parsets()
-      .dimensions(["class","cap-surface","habitat", "spore-print-color","cap-color" ]);
+      .dimensions(["class","habitat", "spore-print-color","cap-color","cap-surface" ]);
       
     var vis = d3.select("#vis").append("svg")
       .attr("width", chart.width())
@@ -132,7 +132,7 @@
     }
 
     d3.csv(
-      "https://gist.githubusercontent.com/supakornbabe/b111f3462dddddd994ca8230a7862b69/raw/42447fc8c6fa1b37e91bb084e7f2dd1f57eb430c/gistfile1.txt",
+      "https://gist.githubusercontent.com/supakornbabe/68c59448a91e38eefc66d95ff596148a/raw/a5025587dcd15d67a0e826851aee35b07f40f34d/gistfile1.txt",
       function (csv) {
         vis.datum(csv).call(chart);
 
